@@ -178,7 +178,7 @@ model.summary()
 
 mcp_save = tf.keras.callbacks.ModelCheckpoint('unet_param.h5', save_best_only=True, monitor='val_accuracy', mode='max')
 
-hist = model.fit(x_train2, t_train2, batch_size=mini_batch, validation_data=(x_test2, t_test2), epochs=10, callbacks=[mcp_save])
+hist = model.fit(x_train2, t_train2, batch_size=mini_batch, validation_data=(x_test2, t_test2), epochs=100, callbacks=[mcp_save])
 
 pred_val = np.zeros_like(t_test2)
 for i in range(x_test2.shape[0]//mini_batch+1):
