@@ -7,6 +7,6 @@
 
 ## Car Segmentation
 
----
+
 
 ## LandCover Classification
